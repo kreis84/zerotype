@@ -34,7 +34,6 @@ var NAV =(function()
 	function showSection(scrollFromTop)
 	{
 		var windowDistancePast = window.innerHeight + scrollFromTop;
-
 		sections.each(function(index, element){
 			var $element = $(element);
 			var windowWidth = screen.availWidth;
