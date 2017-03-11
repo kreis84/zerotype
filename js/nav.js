@@ -44,7 +44,7 @@ var NAV =(function()
 					var rand = HELPER.random(-1000, 1000),
 						titleRand = HELPER.random(-1000, 1000);
 					if(windowWidth > 900) $element.css({opacity: '0', left: rand});
-					$element.find('h1').css({opacity: '0', left: titleRand});
+					var temp=$element.find('h1').css({opacity: '0', left: titleRand});
 					setTimeout(()=>{
 						$element.addClass('showAndCenter viewed');
 						$element.find('h1').addClass('showAndCenter');
