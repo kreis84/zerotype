@@ -22,15 +22,6 @@ var NAV =(function()
 		}
 	};
 
-	function upSign(scrollFromTop)
-	{
-		if(scrollFromTop > 200)
-			$('#upSign').css({display: 'block'});
-		else
-			$('#upSign').css({display: 'none'});
-
-	};
-
 	function showSection(scrollFromTop)
 	{
 		var windowDistancePast = window.innerHeight + scrollFromTop;
@@ -58,15 +49,11 @@ var NAV =(function()
 			$(document).scrollTop(0);
 			$('main section').css({opacity: '0'});
 
-			$('nav a').on('click', function(event){	
+			$('nav a, .sideMenu a').on('click', function(event){	
 				event.preventDefault();
 				scrollTo(this);
 			});
 
-			$('#upSign').on('click', function(){
-				$('body, html').animate({ scrollTop: '0'},500);
-			});
-			
 			$(document).on('scroll', function(){
 				var scrollFromTop = $(document).scrollTop();
 				showSection(scrollFromTop);
